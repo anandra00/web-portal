@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+:root {
+    --warna-utama: #263c92;
+    --warna-hero: #280935;
+    --bs-primary: var(--warna-utama);
+    --bs-primary-rgb: 38, 60, 146;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    padding-top: 80px;
+    font-size: 1 rem;
+}
+
+.navbar-custom {
+    background-color: var(--warna-utama) !important;
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+    color: #ffffff;
+    font-weight: 600;
+    margin-left: 1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-custom .nav-link:hover {
+    color: #d1eaff;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-custom .nav-link {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+}
+
+.hero-section {
+    background: linear-gradient(45deg, var(--warna-hero), #4a1c60);
+}
+
+.hero-section .display-6 {
+    font-size: 3rem;
+    font-weight: 200;
+    margin-bottom: 20px;
+}
+
+.hero-section .lead {
+    font-size: 3rem;
+}
+
+.info-section {
+    padding: 60px 0;
+}
+
+.info-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.info-header h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #003d59;
+}
+
+.info-header hr {
+    width: 150px;
+    margin: 8px auto 0;
+    border: none;
+    height: 2px;
+    background-color: #ccc;
+}
+
+.info-section .card {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    background-color: #ffffff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 0.5s ease-out forwards;
+    opacity: 0;
+}
+
+.info-section .row:first-of-type .col-12:nth-child(1) .card {
+    animation-delay: 0.1s;
+}
+
+.info-section .row:first-of-type .col-12:nth-child(2) .card {
+    animation-delay: 0.2s;
+}
+
+.info-section .row:first-of-type .col-12:nth-child(3) .card {
+    animation-delay: 0.3s;
+}
+
+.info-section .row:nth-of-type(2) .col-12:nth-child(1) .card {
+    animation-delay: 0.4s;
+}
+
+.info-section .row:nth-of-type(2) .col-12:nth-child(2) .card {
+    animation-delay: 0.5s;
+}
+
+.info-section .row:nth-of-type(2) .col-12:nth-child(3) .card {
+    animation-delay: 0.6s;
+}
+
+.info-section .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+.info-section .card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+.info-section .card-img-top {
+    transition: transform 0.3s ease;
+}
+
+.footer-custom {
+    background-color: var(--warna-utama);
+}
+
+.footer-custom a {
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-custom a:hover {
+    color: #1abc9c !important;
+}
+
+.btn-tpl {
+    background-color: var(--warna-utama);
+    color: #ffffff;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-tpl:hover {
+    background-color: var(--warna-hero);
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.hero-section,
+.info-section {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+}
+
+.hero-section .display-6 {
+    font-size: 2.8rem;
+}
+
+.hero-section .lead {
+    font-size: 1rem;
+}
+
+.info-header h2 {
+    font-size: 1.5rem;
+}
+
+.mb-4 {
+    margin-bottom: 1rem !important;
+}
+
+
+/* Definisikan warna utama dari variabel Anda */
+
+:root {
+    --warna-utama: #263c92;
+    --warna-highlight: #d1eaff;
+    /* Warna untuk garis aktif/hover */
+}
+
+
+/* 1. Atur posisi dasar link */
+
+.nav-tpl-link {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+
+/* 2. Style dan posisi garis bawah (::after) */
+
+.nav-tpl-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    /* Ketebalan garis */
+    background-color: var(--warna-highlight);
+    bottom: 0;
+    /* Letakkan di bagian bawah link */
+    left: 0;
+    /* Atur Garis agar tidak terlihat secara default (transform: scaleX(0)) */
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    /* Garis akan muncul dari tengah/samping */
+    transition: transform 0.3s ease-out;
+}
+
+
+/* 3. Efek HOVER: Garis muncul */
+
+.nav-tpl-link:hover::after {
+    transform: scaleX(1);
+    /* Garis terlihat penuh */
+    transform-origin: bottom left;
+    /* Transisi terlihat dari kiri */
+}
+
+
+/* 4. Efek ACTIVE (Halaman Aktif): Garis selalu terlihat */
+
+.nav-tpl-link.active::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    background-color: #ffffff;
+    /* Warna putih atau kontras saat aktif */
+}
+
+
+/* KOREKSI: Pastikan link aktif juga memiliki warna teks yang kontras */
+
+.navbar-custom .nav-link.active {
+    color: #ffffff !important;
+    font-weight: 700;
+}

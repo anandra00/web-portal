@@ -1,0 +1,282 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #e4e4e4;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.nav-container1 {
+  background-color: #263C92;
+  color: white;
+  text-align: center;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.logo-TPL {
+  width: 4rem;
+  height: 4rem;
+  margin: 9px;
+}
+
+.nav-container2 {
+  background-color: #2b0e4e;
+  color: white;
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.container {
+  display: flex;
+  flex: 1;
+  min-height: 75vh;
+}
+
+.sidebar {
+  width: 220px;
+  background-color: #2b0e4e;
+  display: flex;
+  flex-direction: column;
+  padding: 1.2rem 0;
+  align-items: center;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  padding: 0.8rem 0;
+  text-align: center;
+  width: 100%;
+  transition: 0.3s;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+  background-color: #f4f4f4;
+  color: #2b0e4e;
+  font-weight: 600;
+}
+
+.container {
+  display: flex;
+  flex: 1;
+  min-height: 75vh;
+}
+
+.sidebar {
+  width: 220px;
+  background-color: #2b0e4e;
+  display: flex;
+  flex-direction: column;
+  padding: 1.2rem 0;
+  align-items: center;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  padding: 0.8rem 0;
+  text-align: center;
+  width: 100%;
+  transition: 0.3s;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+  background-color: #f4f4f4;
+  color: #2b0e4e;
+  font-weight: 600;
+}
+
+.container {
+  display: flex;
+  flex: 1;
+}
+
+.content {
+  flex: 1;
+  padding: 2rem 3rem;
+  background-color: #e9e9e9;
+}
+
+.page-title {
+  color: #2b0e4e;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+}
+
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem; /* lebih rapat */
+  justify-items: center;
+}
+
+.validated-card {
+  background-color: #263C92;
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 2rem 1.3rem;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 700px;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.validated-card:hover {
+  transform: translateY(-4px);
+}
+
+.judul-karya {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  line-height: 1.4;
+}
+
+.pembuat {
+  font-size: 0.85rem;
+  margin-bottom: 0.6rem;
+  opacity: 0.9;
+}
+
+.card-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.8rem;
+  margin-top: 0.8rem;
+}
+
+.btn-hapus {
+  flex: 1;
+  background-color: transparent;
+  color: #ffffff;          /* teks merah */
+  border: 2px solid #ffffff; /* border putih */
+  border-radius: 6px;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-hapus:hover {
+  transform: scale(0.95); 
+}
+
+.btn-lihat {
+  flex: 1.5;
+  background-color: #ffffff;
+  color:#263C92 ;
+  border: 2px ;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+  width:20rem;
+}
+
+
+.btn-lihat:hover {
+  transform: scale(0.95); 
+}
+
+footer {
+  background-color: #263C92;
+  color: white;
+  padding: 1rem 2rem;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-left {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.footer-left .logo {
+  width: 60px;
+  height: 60px;
+}
+
+.location {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 0.6rem;
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+@media (max-width: 992px) {
+  .card-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .card-list {
+    grid-template-columns: 1fr;
+  }
+
+  .validated-card {
+    text-align: center;
+    align-items: center;
+  }
+
+  .lihat-btn {
+    align-self: center;
+  }
+}
